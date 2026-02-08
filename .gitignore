@@ -1,14 +1,65 @@
-/dist/
-/log/
-/results/
-/tmp_check/
-/sql/vector--?.?.?.sql
-regression.*
+# pgvector git ignore file
+
+# PostgreSQL 扩展编译产物
 *.o
 *.so
-*.bc
-*.dll
 *.dylib
-*.obj
-*.lib
-*.exp
+*.dll
+
+# PostgreSQL 依赖文件
+.deps/
+*.firstdate
+*.gitkeep
+
+# 缓存文件
+*.cache
+
+# 测试和临时文件
+tmp/
+tmp_check/
+
+# IDE 和编辑器
+.vscode/
+.idea/
+
+# macOS 系统文件
+.DS_Store
+
+# 备份文件
+*.bak
+*.orig
+*~
+
+# 环境变量（不要提交）
+.env.local
+.env
+
+# 日志文件
+*.log
+compile_commands.log
+
+# 性能分析数据
+perf.data
+callgrind.out
+
+# 用户特定文件
+*.code/
+.vscode/
+
+# 编译输出的临时文件
+scan-build-*/
+
+# Git 和 GitHub 相关
+.git/
+.github/
+
+# IDE 配置
+.editorconfig
+.vscode/
+
+# 构建缓存
+cmake-build-*/
+
+*.log
+
+*sql
