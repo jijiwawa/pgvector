@@ -15,7 +15,14 @@ extern float (*HalfvecInnerProduct) (int dim, half * ax, half * bx);
 extern double (*HalfvecCosineSimilarity) (int dim, half * ax, half * bx);
 extern float (*HalfvecL1Distance) (int dim, half * ax, half * bx);
 
+/* NEON/AARCH64 函数指针 */
+extern float (*HalfvecL2SquaredDistanceNeonPtr) (int dim, half * ax, half * bx);
+extern float (*HalfvecInnerProductNeonPtr) (int dim, half * ax, half * bx);
+extern double (*HalfvecCosineSimilarityNeonPtr) (int dim, half * ax, half * bx);
+extern float (*HalfvecL1DistanceNeonPtr) (int dim, half * ax, half * bx);
+
 void		HalfvecInit(void);
+void		NeonHalfvecInit(void);
 
 /*
  * Check if half is NaN

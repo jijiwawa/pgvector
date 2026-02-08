@@ -297,4 +297,14 @@ HalfvecInit(void)
 		HalfvecL1Distance = HalfvecL1DistanceF16c;
 	}
 #endif
+
+#ifdef HALFVEC_DISPATCH_AARCH64
+	if (HalfvecL2SquaredDistanceNeonPtr != NULL)
+	{
+		HalfvecL2SquaredDistance = HalfvecL2SquaredDistanceNeonPtr;
+		HalfvecInnerProduct = HalfvecInnerProductNeonPtr;
+		HalfvecCosineSimilarity = HalfvecCosineSimilarityNeonPtr;
+		HalfvecL1Distance = HalfvecL1DistanceNeonPtr;
+	}
+#endif
 }

@@ -3,6 +3,7 @@
 #include <math.h>
 
 #include "bitutils.h"
+#include "neon.h"
 #include "bitvec.h"
 #include "catalog/pg_type.h"
 #include "common/shortest_dec.h"
@@ -54,6 +55,8 @@ _PG_init(void)
 {
 	BitvecInit();
 	HalfvecInit();
+	NeonHalfvecInit();
+	NeonVectorInit();
 	HnswInit();
 	IvfflatInit();
 }
